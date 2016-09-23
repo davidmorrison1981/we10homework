@@ -14,11 +14,13 @@ RecordStore.prototype = {
   },
 
   listInventory: function(inventory){
-    var allRecords = this.inventory.map
-    var allRecordstring = allRecords.join()
-    console.log(allRecordstring)
- 
+    this.inventory.map(function(record){
+      
 
+
+    } 
+    // var allRecordstring = allRecords.join()
+    // console.log(allRecordstring)
   }
 
 }

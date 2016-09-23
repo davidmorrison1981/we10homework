@@ -25,7 +25,7 @@ describe("RecordStore", function(){
   it("can list record inventory", function(){
     edinburgh.addRecord(discovery,musique,humanAfterAll),
     edinburgh.listInventory(edinburgh.inventory),
-    assert.deepEqual("Daft Punk, Discovery, 9.99, Daft Punk, Musique Vol.1, 9.99, Daft Punk, Human After All, 9.99", edinburgh.listInventorystring)
+    assert.deepEqual("Daft Punk, Discovery, 9.99, Daft Punk, Musique Vol.1, 9.99, Daft Punk, Human After All, 9.99", edinburgh.listInventory)
   })
 
 

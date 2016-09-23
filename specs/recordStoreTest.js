@@ -9,13 +9,26 @@ describe("RecordStore", function(){
     assert.deepEqual([], edinburgh.inventory)
   })
 
-  it("can add records to inventory", function(){
+  beforeEach(function(){
     edinburgh = new RecordStore("Edinburgh", [])
-    edinburgh.addRecord(),
+    discovery = new Record("Daft Punk", "Discovery", 9.99),
+    musique = new Record("Daft Punk", "Musique Vol.1", 9.99),
+    humanAfterAll = new Record("Daft Punk", "Human After All", 9.99)    
+  });
+
+  it("can add records to inventory", function(){
+    edinburgh.addRecord(discovery,musique,humanAfterAll),
+    // console.log(edinburgh)
     assert.deepEqual(3, edinburgh.inventory.length)
   })
 
-  
+  it("can list record inventory", function(){
+    edinburgh.addRecord(discovery,musique,humanAfterAll),
+    edinburgh.listInventory(edinburgh.inventory),
+    assert.deepEqual("Daft Punk, Discovery, 9.99, Daft Punk, Musique Vol.1, 9.99, Daft Punk, Human After All, 9.99", edinburgh.listInventorystring)
+  })
+
+
 
 
 

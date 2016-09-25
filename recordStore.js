@@ -15,6 +15,9 @@ RecordStore.prototype = {
 
   listInventory: function(inventory){
     this.inventory.map(function(record){
+      for (var key in record) {
+            console.log(key + ": " + record[key]);
+          }
       
 
 

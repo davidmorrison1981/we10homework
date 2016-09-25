@@ -13,19 +13,15 @@ RecordStore.prototype = {
     return this.inventory.push(record1,record2,record3)
   },
 
-  listInventory: function(inventory){
-    this.inventory.map(function(record){
-      for (var key in record) {
-            console.log(key + ": " + record[key]);
-          }
-      
+  
 
-
-    } 
-    // var allRecordstring = allRecords.join()
-    // console.log(allRecordstring)
-  }
-
+    listInventory:  function(inventory){
+      this.inventory.map(function(record){
+        for (var record in inventory){
+          console.log(record + ": " + inventory[record])
+        }
+      })
+    }
 }
 
 module.exports = RecordStore;

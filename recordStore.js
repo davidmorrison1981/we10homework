@@ -16,17 +16,19 @@ RecordStore.prototype = {
 
   
 
-    listInventory:  function(inventory){
-      this.inventory.map(function(record){
-        for (var record in inventory){
-          console.log(record + ": " + inventory[record])
-          return
-        }
-      })
-    }
+    // listInventory:  function(inventory){
+    //   this.inventory.map(function(record){
+    //     for (var record in inventory){
+    //       console.log(record + ": " + inventory[record])
+    //       return
+    //     }
+    //   })
+    // },
 
-   sellRecord: function(record){
-
+   sellRecord: function(record, balance){
+    console.log(record)
+    this.balance += record.price
+    return this.balance
    } 
 }
 
